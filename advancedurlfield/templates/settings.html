@@ -1,0 +1,26 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	label: "Placeholder Text"|t,
+    instructions: "The text that will be shown if the field doesn’t have a value."|t,
+	id: 'placeholder',
+	name: 'placeholder',
+	value: settings.placeholder,
+	translatable: true,
+	errors: settings.getErrors('placeholder')
+}) }}
+
+{% set fieldConfig = {
+	label : 'URL Type' | t,
+    instructions : 'Determines what kind of URLs are allowed in this field.' | t,
+    id : 'urlType',
+    name : 'urlType',
+	values: settings.urlType,
+    options : {
+		'relative' : 'Relative URLs' | t,
+		'absolute' : 'Absolute URLs' | t,
+		'mailto' : 'Mailto Protocol' | t,
+		'tel' : 'Tel Protocol' | t,
+	}
+} %}
+{{ forms.field(fieldConfig, forms.checkboxGroup(fieldConfig)) }}

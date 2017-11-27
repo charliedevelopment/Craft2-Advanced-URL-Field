@@ -1,0 +1,13 @@
+{% import "_includes/forms" as forms %}
+{% set classes = '' %}
+{% for type in settings.urlType %}
+	{% set classes = classes ~ ' ' ~ type %}
+{% endfor %}
+{{ forms.text({
+	id : name,
+	name : name,
+	value : value,
+	class : 'nicetext' ~ classes,
+	maxlength: 2048,
+	placeholder: settings.placeholder
+}) }}
