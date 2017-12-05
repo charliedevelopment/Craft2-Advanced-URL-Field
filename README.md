@@ -11,7 +11,7 @@ This plugin can help prevent incorrect URLs such as `http://example.com/www.goog
 ## Installation
 
 1. Download the latest version of *Advanced URL Field*.
-2. Move the `urlfield` directory into the `craft/plugins/` directory.
+2. Move the `advancedurlfield` directory into the `craft/plugins/` directory.
 3. In the Craft control panel, go to *Settings > Plugins*.
 4. Find *Advanced URL Field* in the list of plugins and click the *Install* button.
 
@@ -20,7 +20,7 @@ This plugin can help prevent incorrect URLs such as `http://example.com/www.goog
 ### Creating an Advanced URL Field
 
 1. Create a new field.
-2. Select *URL* as the field type.
+2. Select *Advanced URL* as the field type.
 4. Select which URL types to allow.*
 5. Attach the new field to a section.
 
@@ -28,12 +28,12 @@ This plugin can help prevent incorrect URLs such as `http://example.com/www.goog
 
 * **Relative URLS** must match the format of a URL path, relative to the document root, for example `/about` or `/categories/new#first`.
 * **Absolute URLS** must match a full absolute url, prefixed with protocol and containing a domain name, for example `https://www.example.com/` or `https://example.com/about`.
-* **Mailto Protocol** must match be an email address prefixed by `mailto:`.
+* **Mailto Protocol** must be an email address prefixed by `mailto:`.
 * **Tel Protocol** must be a phone number prefixed by `tel:`.
 
 ### Templating with a URL Field
 
-In a Twig template, you can retrieve the data from a URL field as you would from the plain text field. See the example below, where `myURLField` is a URL field that determines the link destination.
+In a Twig template, you can retrieve the data from a URL field as you would from the plain text field. See the example below, where `myURLField` is an Advanced URL field that determines the link destination.
 
 ```twig
 <a href="{{ entry.myURLField }}">My Link</a>
