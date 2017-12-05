@@ -24,6 +24,8 @@ This plugin can help prevent incorrect URLs such as `http://example.com/www.goog
 4. Select which URL types to allow.*
 5. Attach the new field to a section.
 
+![Screenshot of field creation screen](./resources/screenshots/creating-advanced-url-field.png)
+
 **URL Types*
 
 * **Relative URLS** must match the format of a URL path, relative to the document root, for example `/about` or `/categories/new#first`.
