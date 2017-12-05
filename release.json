@@ -15,5 +15,13 @@
         "notes": [
             "[Fixed] Feed URL"
         ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/charliedevelopment/Advanced-URL-Field/archive/master.zip",
+        "date": "2017-11-21T23:02:08+00:00",
+        "notes": [
+            "[Added] Schema Version in Plugin (No DB Edits)"
+        ]
     }
 ]
