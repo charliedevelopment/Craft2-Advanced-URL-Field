@@ -26,6 +26,6 @@ class AdvancedUrlFieldPlugin extends BasePlugin {
 	
 	public function getReleaseFeedUrl()
 	{
-		return 'https://raw.githubusercontent.com/charliedevelopment/Advanced-URL-Field/master/release.json'
+		return 'https://raw.githubusercontent.com/charliedevelopment/Advanced-URL-Field/master/release.json';
 	}	
 }
