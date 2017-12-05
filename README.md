@@ -31,12 +31,12 @@ This plugin can help prevent incorrect URLs such as `http://example.com/www.goog
 * **Mailto Protocol** must be an email address prefixed by `mailto:`.
 * **Tel Protocol** must be a phone number prefixed by `tel:`.
 
-### Templating with a URL Field
+### Templating with an Advanced URL Field
 
-In a Twig template, you can retrieve the data from a URL field as you would from the plain text field. See the example below, where `myURLField` is an Advanced URL field that determines the link destination.
+In a Twig template, you can retrieve the data just as you would from a plain text field. See the example below, where `myURL` is an Advanced URL field that determines the link destination.
 
 ```twig
-<a href="{{ entry.myURLField }}">My Link</a>
+<a href="{{ entry.myURL }}">My Link</a>
 ```
 
 ---
