@@ -32,5 +32,13 @@
             "[Added] Documentation link",
 			"[Improved] Added screenshot in documentation"
         ]
+    },
+    {
+        "version": "1.0.4",
+        "downloadUrl": "https://github.com/charliedevelopment/Craft2-Advanced-URL-Field/archive/master.zip",
+        "date": "2017-12-11T20:18:41+00:00",
+        "notes": [
+			"[Improved] Fixed code formatting to conform to internal standards"
+        ]
     }
 ]

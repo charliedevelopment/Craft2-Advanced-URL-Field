@@ -2,9 +2,11 @@
 
 namespace Craft;
 
-class m171110_090000_advancedUrlField_addNewOptions extends BaseMigration {
+class m171110_090000_advancedUrlField_addNewOptions extends BaseMigration
+{
 
-    public function safeUp() {
+	public function safeUp()
+	{
 
 		// Field settings are changing, so we need to update those on any url field.
 		// We need to get all url fields, regardless of context, which as of the time of writing, can only be done manually.
@@ -34,6 +36,6 @@ class m171110_090000_advancedUrlField_addNewOptions extends BaseMigration {
 			craft()->db->createCommand()->update('fields', array('settings' => JsonHelper::encode($result['settings'])), 'id = :id', array(':id' => $result['id']));
 		}
 
-        return true;
-    }
+		return true;
+	}
 }

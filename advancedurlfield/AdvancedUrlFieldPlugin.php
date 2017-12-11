@@ -2,37 +2,46 @@
 
 namespace Craft;
 
-class AdvancedUrlFieldPlugin extends BasePlugin {
+class AdvancedUrlFieldPlugin extends BasePlugin
+{
 	
-	public function getVersion() {
-		return '1.0.3';
+	public function getVersion()
+	{
+		return '1.0.4';
 	}
 	
-	public function getName() {
+	public function getName()
+	{
 		return Craft::t('Advanced URL Field');
 	}
 	
-	public function getDescription() {
+	public function getDescription()
+	{
 		return Craft::t('Provides a configurable URL-only text field.');
 	}
 	
-	public function getDeveloper() {
+	public function getDeveloper()
+	{
 		return 'Charlie Development';
 	}
 
-	public function getDeveloperUrl() {
+	public function getDeveloperUrl()
+	{
 		return 'http://charliedev.com/';
 	}
 
-	public function getDocumentationUrl() {
+	public function getDocumentationUrl()
+	{
 		return 'https://github.com/charliedevelopment/Craft2-Advanced-URL-Field/blob/master/README.md';
 	}
 	
-	public function getReleaseFeedUrl() {
+	public function getReleaseFeedUrl()
+	{
 		return 'https://raw.githubusercontent.com/charliedevelopment/Craft2-Advanced-URL-Field/master/release.json';
 	}
 	
-	public function getSchemaVersion() {
+	public function getSchemaVersion()
+	{
 		return '1.0.0';
 	}
 }

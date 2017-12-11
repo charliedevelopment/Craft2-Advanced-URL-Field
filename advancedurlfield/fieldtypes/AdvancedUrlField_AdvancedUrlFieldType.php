@@ -2,54 +2,62 @@
 
 namespace Craft;
 
-class AdvancedUrlField_AdvancedUrlFieldType extends BaseFieldType implements IPreviewableFieldType {
+class AdvancedUrlField_AdvancedUrlFieldType extends BaseFieldType implements IPreviewableFieldType
+{
 	
-    public function getName() {
-        return Craft::t('Advanced URL');
-    }
+	public function getName()
+	{
+		return Craft::t('Advanced URL');
+	}
 	
-	public function getSettingsHtml() {
-        return craft()->templates->render('advancedurlfield/settings', array(
-            'settings' => $this->getSettings(),
-        ));
-    }
+	public function getSettingsHtml()
+	{
+		return craft()->templates->render('advancedurlfield/settings', array(
+			'settings' => $this->getSettings(),
+		));
+	}
 
-    public function defineContentAttribute() {
-        return array(
+	public function defineContentAttribute()
+	{
+		return array(
 			AttributeType::String,
 			'maxLength' => 2000, // Urls should not be too long, this is a pretty safe limit, mostly because IE generally can't handle anything much longer than this.
 		);
-    }
+	}
 
-    public function getInputHtml($name, $value) {
-        return craft()->templates->render('advancedurlfield/input', array(
-            'name'  => $name,
-            'value' => $value,
+	public function getInputHtml($name, $value)
+	{
+		return craft()->templates->render('advancedurlfield/input', array(
+			'name'  => $name,
+			'value' => $value,
 			'settings' => $this->getSettings(),
-        ));
-    }
+		));
+	}
 	
-	protected function defineSettings() {
-        return array(
+	protected function defineSettings()
+	{
+		return array(
 			// Stores flags for what kind of URIs are allowed.
-            'urlType' => array(
+			'urlType' => array(
 				AttributeType::Mixed,
 			),
 			// Text shown when the input is blank.
 			'placeholder' => array(
 				AttributeType::String,
 			)
-        );
-    }
+		);
+	}
 
-    public function getTableAttributeHtml($value) {
+	public function getTableAttributeHtml($value)
+	{
 		// In the table, just provide the URL as a link.
-        if ($value) {
-            return '<a href="' . $value . '" target="_blank">' . $value . '</a>';
-        }
-    }
+		if ($value) {
+			return '<a href="' . $value . '" target="_blank">' . $value . '</a>';
+		}
+	}
 	
-	public function validate($value) {
+	public function validate($value)
+	{
 		
 		// Make types into keys for easy reference.
 		$allowedtypes = array_flip($this->getSettings()['urlType']);
