@@ -40,5 +40,13 @@
         "notes": [
 			"[Improved] Fixed code formatting to conform to internal standards"
         ]
+    },
+    {
+        "version": "1.0.4",
+        "downloadUrl": "https://github.com/charliedevelopment/Craft2-Advanced-URL-Field/archive/master.zip",
+        "date": "2018-02-21T20:18:41+00:00",
+        "notes": [
+			"[Improved] If an a settings object for a field is not set, throw unique error. In cases where converted plugin was run without the migration file."
+        ]
     }
 ]

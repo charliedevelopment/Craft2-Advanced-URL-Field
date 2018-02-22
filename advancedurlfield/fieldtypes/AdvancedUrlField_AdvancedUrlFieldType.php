@@ -60,7 +60,11 @@ class AdvancedUrlField_AdvancedUrlFieldType extends BaseFieldType implements IPr
 	{
 		
 		// Make types into keys for easy reference.
-		$allowedtypes = array_flip($this->getSettings()['urlType']);
+		if (is_array($this->getSettings()['urlType'])){
+			$allowedtypes = array_flip($this->getSettings()['urlType']);
+		} else {
+			return Craft::t('Settings object not an array, see migration.');
+		}
 
 		// Make sure the value matches at least one of the allowed types.
 		$matches = false;
